@@ -1,0 +1,172 @@
+html, body {
+    min-height: 90%;
+    overflow-x: hidden;
+}
+
+body{
+    background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%) center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:black;
+    font-family: 'Exo', sans-serif; 
+}
+
+/*Reusable -----------------------------------------------------------------------------------------------------------------*/
+.center{
+    text-align: center;
+}
+
+.left{
+    float:left;
+}
+
+.small{
+    font-size:25px;
+}
+
+.medium{
+    font-size: 50px;
+}
+
+.thickbar{
+    border: 10px solid black;
+}
+
+.inline{
+    float:left;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  padding-top: 56.25% // 9 / 16 * 100%
+}
+
+.embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Center Block -----------------------------------------------------------------------------------------------------------------*/
+.centblock{
+    min-height: 63vh;
+    height:100%;
+    width:100%;
+}
+
+.centgn{
+    padding-top: 17vh;
+    text-align: center;
+    font-size: 100px;
+}
+
+#mainscreen{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+/*Navbar -----------------------------------------------------------------------------------------------------------------*/
+#menubutt{
+    height:37px;
+    margin-top: -2px;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    right: -210px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+#navbar:hover, #navbar:focus{
+    right:0;
+}
+
+.navbutt{
+    padding-top: 3px;
+    padding-right: 3px;
+}
+
+.navblock:hover, navblock:focus{
+    background-color: darkseagreen;
+}
+
+.destylea{
+    display: inline-block;
+    padding: 8px;
+    text-decoration: none;
+    color:black;
+}
+
+/* Animation -----------------------------------------------------------------------------------------------------------------*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+.reversefade {
+    -webkit-animation-name: reversefade;
+    -webkit-animation-duration: 5s;
+    animation-name: reversefade;
+    animation-duration: 5s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes reversefade {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+
+.glowanim {
+/*  animation: glowblack 5000ms infinite;*/
+    animation: glowwhite 5000ms infinite;
+}
+
+@keyframes glowblack {
+    0% { box-shadow: 0 0 -50px black;}
+    40% { box-shadow: 0 0 100px black;}
+    60% { box-shadow: 0 0 100px black;}
+    100% { box-shadow: 0 0 -50px black;}
+}
+
+@keyframes glowwhite {
+    0% { box-shadow: 0 0 -100px white, inset 0 0 -200px grey;}
+    40% { box-shadow: 0 0 200px white, inset 0 0 150px grey;}
+    60% { box-shadow: 0 0 200px white, inset 0 0 150px grey;}
+    100% { box-shadow: 0 0 -100px white, inset 0 0 -200px grey;}
+}
+
+/*maybe later*/
+@keyframes perhamps {
+    0% { box-shadow: 0 0 -10px black; transform-origin: right; transform:rotate(-360deg);}
+    40% { box-shadow: 0 0 20px black; }
+    60% { box-shadow: 0 0 20px black; }
+    100% { box-shadow: 0 0 -10px black; transform-origin: left; transform:rotate(360deg);}
+}
+
+.glowanim {
+/*  animation: glowblack 5000ms infinite;*/
+    animation: glowwhite 3000ms infinite;
+}
+
+/*Multimedia Support -----------------------------------------------------------------------------------------------------------------*/
